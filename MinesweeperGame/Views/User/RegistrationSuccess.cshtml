@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Registration Success";
+    Layout = "_Layout";
+}
+
+<div class="alert alert-success">
+    <h2>Registration Successful!</h2>
+    <p>Your user ID is: <strong>@ViewBag.Id</strong></p>
+    <a asp-action="Login" class="btn btn-primary">Login Now</a>
+</div>

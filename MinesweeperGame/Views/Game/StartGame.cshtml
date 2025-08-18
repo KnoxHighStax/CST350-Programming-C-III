@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Start Game";
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <h3>Welcome to Minesweeper, @Context.Session.GetString("Username")!</h3>
+    <p>This is the game starting area. Game functionality will be implemented here later.</p>
+
+    <div class="mt-4">
+        <a href="#" class="btn btn-success">Begin New Game</a>
+        <a href="#" class="btn btn-info">Load Saved Game</a>
+        <a asp-controller="User" asp-action="Logout" class="btn btn-danger">Logout</a>
+    </div>
+</div>
