@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Minesweeper</h1>
+    <p>Test your skills in this classic puzzle game!</p>
+
+    @if (Context.Session.GetString("User") != null)
+    {
+        <a asp-controller="Game" asp-action="StartGame" class="btn btn-primary btn-lg">Play Game</a>
+    }
+    else
+    {
+        <a asp-controller="User" asp-action="Index" class="btn btn-primary btn-lg">Login to Play</a>
+    }
+</div>

@@ -1,0 +1,53 @@
+﻿@model MinesweeperGame.Models.Board
+
+@{
+    ViewData["Title"] = "Game Over";
+}
+
+<div class="text-center">
+    <h2 class="text-danger">Game Over!</h2>
+    <p>You clicked on a mine.</p>
+
+    <div class="game-board">
+        @for (int row = 0; row < Model.Size; row++)
+        {
+            <div class="board-row">
+                @for (int col = 0; col < Model.Size; col++)
+                {
+                    var cell = Model.Grid[row, col];
+                    <div class="game-cell">
+                        @if (cell.IsLive)
+                        {
+                            <span class="cell-mine">
+                                <img src="~/images/mine.png" alt="Mine" class="cell-image" />
+                            </span>
+                        }
+                        else if (cell.IsVisited && cell.LiveNeighbors > 0)
+                        {
+                            <span class="cell-number number-@cell.LiveNeighbors">@cell.LiveNeighbors</span>
+                        }
+                        else if (cell.IsVisited)
+                        {
+                            <span class="cell-empty">&nbsp;</span>
+                        }
+                        else if (cell.IsFlagged)
+                        {
+                            <span class="cell-flag">
+                                <img src="~/images/flag.png" alt="Flag" class="cell-image" />
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="cell-hidden">&nbsp;</span>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="mt-4">
+        <a asp-controller="Home" asp-action="StartGame" class="btn btn-primary">Play Again</a>
+        <a asp-controller="Home" asp-action="StartGame" class="btn btn-secondary">Main Menu</a>
+    </div>
+</div>

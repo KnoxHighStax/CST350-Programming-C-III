@@ -1,0 +1,33 @@
+﻿@model MinesweeperGame.Models.Board
+
+@{
+    ViewData["Title"] = "Minesweeper Game";
+}
+
+<h2>Minesweeper Game</h2>
+
+<partial name="_GameInfo" model="Model" />
+
+
+<div class="game-board">
+    @for (int row = 0; row < Model.Size; row++)
+    {
+        <div class="board-row">
+            @for (int col = 0; col < Model.Size; col++)
+            {
+                var cell = Model.Grid[row, col];
+                <div class="game-cell-container" data-row="@row" data-col="@col">
+                    <partial name="_Cell" model="cell" />
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<div class="mt-3">
+    <a asp-controller="Home" asp-action="StartGame" class="btn btn-primary">New Game</a>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Main Menu</a>
+</div>
+
+@section Scripts {
+}

@@ -1,0 +1,15 @@
+﻿@model MinesweeperGame.Models.Board
+
+@{
+    ViewData["Title"] = "You Win!";
+}
+
+<div class="text-center">
+    <h2 class="text-success">Congratulations!</h2>
+    <p>You cleared the minefield!</p>
+
+    <div class="mt-4">
+        <a asp-action="StartGame" class="btn btn-primary">Play Again</a>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Main Menu</a>
+    </div>
+</div>

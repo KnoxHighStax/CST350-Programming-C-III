@@ -1,0 +1,25 @@
+﻿@model MinesweeperGame.Models.Board
+
+<div class="game-info mb-3" id="game-info">
+    <div class="row">
+        <div class="col-md-3">
+            <strong>Mines: </strong> <span id="mine-count">@Model.MineCount</span>
+        </div>
+        <div class="col-md-3">
+            <strong>Flags: </strong> <span id="flag-count">@Model.FlagCount</span>
+        </div>
+        <div class="col-md-3">
+            <strong>Last Update: </strong> <span id="ajax-timestamp">@DateTime.Now.ToString("HH:mm:ss.fff")</span>
+        </div>
+        <div class="col-md-3">
+            @if (Model.GameOver)
+            {
+                <strong class="text-danger">Game Over!</strong>
+            }
+            else if (Model.GameWon)
+            {
+                <strong class="text-success">You Win!</strong>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,171 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.game-board {
+    margin: 0 auto;
+    border: 2px solid #333;
+    display: inline-block;
+    background-color: #ccc;
+    padding: 5px;
+}
+
+.board-row {
+    display: flex;
+}
+
+.game-cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+    .game-cell:hover {
+        background-color: #ccc;
+    }
+
+    .game-cell a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+.cell-hidden {
+    background-color: #bbb;
+    width: 100%;
+    height: 100%;
+}
+
+.cell-image {
+    width: 20px;
+    height: 20px;
+}
+
+.cell-number {
+    font-weight: bold;
+}
+.cell-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.cell-hidden {
+    width: 100%;
+    height: 100%;
+    background-color: #bbb;
+    display: block;
+}
+
+    .cell-hidden:hover {
+        background-color: #aaa;
+    }
+
+.number-1 {
+    color: blue;
+}
+
+.number-2 {
+    color: green;
+}
+
+.number-3 {
+    color: red;
+}
+
+.number-4 {
+    color: darkblue;
+}
+
+.number-5 {
+    color: darkred;
+}
+
+.number-6 {
+    color: teal;
+}
+
+.number-7 {
+    color: black;
+}
+
+.number-8 {
+    color: gray;
+}
+
+.game-info {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.cell-mine {
+    background-color: #ff4444;
+}
+
+.cell-empty {
+    background-color: #e0e0e0;
+}

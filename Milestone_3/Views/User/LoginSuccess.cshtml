@@ -1,0 +1,19 @@
+﻿@model MinesweeperGame.Models.UserModel
+
+@{
+    ViewData["Title"] = "Login Successful";
+}
+
+<h2>Login Successful</h2>
+
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Welcome back, @Model.Username!</h4>
+    <p>You have successfully logged in to your account.</p>
+    <hr>
+    <p class="mb-0">You can now start playing Minesweeper or return to the home page.</p>
+</div>
+
+<div class="mt-4">
+    <a asp-controller="Home" asp-action="StartGame" class="btn btn-primary btn-lg">Start Game</a>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary ml-2">Return to Home</a>
+</div>

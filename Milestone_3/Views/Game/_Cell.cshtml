@@ -1,0 +1,35 @@
+﻿@model MinesweeperGame.Models.Cell
+
+@{
+    var cell = Model;
+}
+
+<div class="game-cell">
+    @if (cell.IsVisited)
+    {
+        if (cell.IsLive)
+        {
+            <span class="cell-mine">
+                <img src="~/images/mine.png" alt="Mine" class="cell-image" />
+            </span>
+        }
+        else if (cell.LiveNeighbors > 0)
+        {
+            <span class="cell-number number-@cell.LiveNeighbors">@cell.LiveNeighbors</span>
+        }
+        else
+        {
+            <span class="cell-empty">&nbsp;</span>
+        }
+    }
+    else if (cell.IsFlagged)
+    {
+        <span class="cell-flag">
+            <img src="~/images/flag.png" alt="Flag" class="cell-image" />
+        </span>
+    }
+    else
+    {
+        <span class="cell-hidden">&nbsp;</span>
+    }
+</div>
